@@ -21,8 +21,16 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 //Code Here
-let evenNumbers  = mixedNumbers.filter(el => el % 2 === 0)
-
+let evenNumbers = mixedNumbers.filter( el => el % 2 === 0)
+// function even(arr) {
+//   let newArr = []
+//   for(let i = 0; i < arr.length; i++) {
+//     if(arr[i] % 2 === 0) {
+//       newArr.push(arr[i])
+//     }
+//   }return newArr
+// }
+// console.log(even(mixedNumbers))
 
 
 ////////// PROBLEM 2 //////////
@@ -64,7 +72,10 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 //Code Here
-let totalPopulation = populations.reduce((tot,el) => tot += el, 0)
+// let totalPopulation = populations.reduce((tot,el) => tot += el, 0)
+let totalPopulation = populations.reduce(function(acc, el){
+  return acc + el
+}, 0)
 
 
 

@@ -77,15 +77,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-function removeDuplicates() {
-  for(i = 0; i < workplaceAccidents.length; i++) {
-    for(j = workplaceAccidents.length; j >= 0; j--) {
+function removeDuplicates(){
+  for (let i = 0; i < workplaceAccidents.length; i++) {
+    for(let j = workplaceAccidents.length -1; j >= 0; j--) {
       if (workplaceAccidents[i] === workplaceAccidents[j] && i !== j){
-        workplaceAccidents.splice(i, 1)
+        workplaceAccidents.splice(j, 1)
       }
     }
-  }return workplaceAccidents
+  } return workplaceAccidents
 }
+console.log(removeDuplicates())
 
 
 ////////// PROBLEM 3 //////////
@@ -155,9 +156,11 @@ var myCar = {
 */
 
 //Code Here
-function recordCleaner(){
-  for(i = 0; i < myCar.accidents.length; i++) {
-    myCar.accidents[i].atFaultForAccident = false
+function recordCleaner() {
+  for (let i = 0; i < myCar.accidents.length; i++) {
+    if (myCar.accidents[i].atFaultForAccident === true) {
+      myCar.accidents[i].atFaultForAccident = false
+    }
   }
 }
 
